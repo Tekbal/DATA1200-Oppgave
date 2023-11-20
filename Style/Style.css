@@ -1,0 +1,616 @@
+/* Importing Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap");
+
+/* Global variables */
+:root {
+  --orange: #ff9900;
+  --gradient: linear-gradient(90deg, var(--orange), var(--brown));
+}
+
+/* Resetting default styles */
+* {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+}
+
+/* Section styles */
+*::section {
+  background: var(--brown);
+  color: #fff;
+}
+
+/* Global HTML styles */
+html {
+  font-size: 62.5%;
+  overflow: auto;
+  scroll-behavior: smooth;
+}
+
+/* Body styles */
+body {
+  background: #ffe6bf;
+}
+
+/* Section styles */
+section {
+  min-height: 100vh;
+  padding: 0 9%;
+  padding-top: 7.5rem;
+}
+
+/* Button styles */
+.btn {
+
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 3rem;
+  border-radius: 5rem;
+  background: var(--gradient);
+  font-size: 1.7rem;
+  color: black;
+  cursor: pointer;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  transition: all 0.3s linear;
+}
+
+/* Button hover effect */
+btn:hover {
+  transform: scale(1.1);
+}
+
+/* Heading styles */
+.heading {
+  text-align: center;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  margin-top: 15rem;
+  padding: 2rem;
+}
+
+/* Header styles */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #ffe6bf;
+  box-shadow: 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  padding: 2rem 9%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+}
+
+/* Logo styles */
+header .logo {
+  font-size: 5rem;
+  color: black;
+}
+header .logo:hover{
+  color: var(--orange);
+}
+
+/* Navbar link styles */
+header .navbar a {
+  font-size: 2rem;
+  margin-left: 2rem;
+  color: black;
+}
+
+/* Navbar link hover styles */
+header .navbar a:hover {
+  color: var(--orange);
+}
+
+/* Header input styles */
+header input {
+  display: none;
+}
+
+/* Header label styles */
+header label {
+  font-size: 2rem;
+  color: var(--orange);
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* Home section styles */
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+/* Home image styles */
+.home .image img {
+  width: 40vw;
+  animation: float 3s linear infinite;
+}
+
+/* Keyframes for floating effect */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0rem);
+  }
+  50% {
+    transform: translateY(-3.5rem);
+  }
+}
+
+/* Home content heading styles */
+.home .content h2 {
+  font-size: 5.5rem;
+  color: #333;
+  text-transform: uppercase;
+}
+
+/* Home content heading span styles */
+.home .content h2 span {
+  color: var(--brown);
+  text-transform: uppercase;
+}
+
+/* Home content paragraph styles */
+.home .content p {
+  font-size: 1.7rem;
+  color: #666;
+  padding: 1rem 0;
+}
+
+/* Study section box container styles */
+.study .box-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Home content button styles */
+.home .content .btn {
+  background: #ffcc80;
+}
+
+/* Study section box styles */
+.study .box-container .box {
+  flex: 1 1 30rem;
+  background: #ffcc80;
+  border-radius: 0.5rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  margin: 1.5rem;
+  padding: 3rem 2rem;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+/* Study section box image styles */
+.study .box-container .box img {
+  height: 25rem;
+}
+
+/* Study section box heading styles */
+.study .box-container .box h2 {
+  font-size: 2rem;
+  color: #333;
+  padding-top: 1rem;
+}
+
+/* Study section box paragraph styles */
+.study .box-container .box p {
+  font-size: 1.5rem;
+  color: #666;
+  padding: 1rem;
+}
+
+.access .box-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+/* Styles for the box container in the access section */
+.access .box-container .box {
+  flex: 1 1 30rem; /* Flexible box sizing for the container */
+  background: #ffcc80; /* Background color for the box */
+  border-radius: 0.5rem; /* Rounded corners for the box */
+  border: 0.1rem solid rgba(0, 0, 0, 0.2); /* Border style for the box */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Shadow effect for the box */
+  margin: 1rem; /* Spacing outside the box */
+  padding: 3rem 2rem; /* Spacing within the box */
+  border-radius: 0.5rem; /* Additional border radius for the box */
+  text-align: center; /* Aligning the text content within the box */
+  font-size: 1.6rem;
+  text-align:justify;
+  
+}
+
+/* Styling for the image inside the box in the access section */
+.access .box-container .box img {
+  width: 115rem;
+  height: 62rem;
+  float: left;
+  border-radius: 1rem;
+  padding: 2rem ;
+}
+
+.topical .box-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Styles for the box container in the topical section */
+.topical .box-container .box {
+ flex: 1 1 30rem; /* Flexible box sizing for the container */
+  background: #ffcc80; /* Background color for the box */
+  border-radius: 0.5rem; /* Rounded corners for the box */
+  border: 0.1rem solid rgba(0, 0, 0, 0.2); /* Border style for the box */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Shadow effect for the box */
+  margin: 1rem; /* Spacing outside the box */
+  padding: 3rem 2rem; /* Spacing within the box */
+  border-radius: 0.5rem; /* Additional border radius for the box */
+  text-align: center; /* Aligning the text content within the box */
+}
+.topical .box-container .box p{
+  font-size: 1.6rem;
+  text-align:justify;
+  margin-top: 2rem;
+}
+/* Styling for the image inside the box in the topical section */
+.topical .box-container .box img {
+  width: 40%; 
+  float: left;
+  border-radius: 1rem;
+  padding: 2rem ;
+}
+
+/* Styles for the box container in the campus section */
+.campus .box-container .box {
+  flex: 1 1 30rem; /* Flexible box sizing for the container */
+  background: #ffcc80; /* Background color for the box */
+  border-radius: 0.5rem; /* Rounded corners for the box */
+  border: 0.1rem solid rgba(0, 0, 0, 0.2); /* Border style for the box */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Shadow effect for the box */
+  margin: 1rem; /* Spacing outside the box */
+  padding: 3rem 2rem; /* Spacing within the box */
+  border-radius: 0.5rem; /* Additional border radius for the box */
+  text-align: center; /* Aligning the text content within the box */
+  
+}
+
+/* Styling for the image inside the box in the campus section */
+.campus .box-container .box img {
+  height: 25rem; /* Setting the height for the image within the box */
+}
+
+.about h1{
+  margin-top: 12rem;
+}
+/* About section column styles */
+.about .column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+}
+
+/* About section column image styles */
+.about .column .image {
+  flex: 1 1 40rem;
+}
+
+/* About section column image inner image styles */
+.about .column .image img {
+  width: 70%;
+  margin-top: 5rem;
+  margin-left: 8rem;
+}
+
+/* About section column content styles */
+.about .column .content {
+  flex: 1 1 40rem;
+}
+.about .column .content .buttons .btn {
+  background:#ffcc80 ; 
+}
+
+
+/* About section column content buttons button styles */
+.about .column .content .buttons .btn {
+  background: #ffcc80;
+}
+
+/* About section column content heading styles */
+.about .column .content h2 {
+  font-size: 3rem;
+  color: #666;
+}
+
+/* About section column content paragraph styles */
+.about .column .content p {
+  font-size: 1.5rem;
+  color: #666;
+  padding: 1rem 0;
+}
+
+/* About section column content buttons last child link styles */
+.about .column .content .buttons a:last-child {
+  margin-left: 2rem;
+}
+
+/* Contact section styles */
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 4rem;
+  margin-top: 6rem;
+}
+
+/* Contact section image styles */
+.contact .image {
+  flex: 1 1 40rem;
+}
+
+/* Contact section image inner image styles */
+.contact .image img {
+  width: 70%;
+  padding: 2rem;
+  margin-top: 5rem;
+}
+
+/* Contact section form styles */
+.contact form {
+  flex: 1 1 40rem;
+  margin-top: 3rem;
+  padding: 2rem 3rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  background: #ffe6bf;
+}
+
+/* Contact section form button styles */
+.contact form .btn {
+  background: #ffcc80;
+}
+
+/* Contact section form heading styles */
+.contact form .heading {
+  text-align: left;
+  padding: 0;
+  padding-bottom: 2rem;
+}
+
+/* Contact section form input box styles */
+.contact form .inputBox {
+  position: relative;
+}
+
+/* Contact section form input and textarea styles */
+.contact form .inputBox input,
+.contact form .inputBox textarea {
+  width: 100%;
+  background: none;
+  color: #666;
+  margin: 1.5rem 0;
+  padding: 0.5rem 0;
+  font-size: 1.7rem;
+  border-bottom: 1rem solid rgba(0, 0, 0, 0.1);
+  text-transform: none;
+}
+
+/* Contact section form textarea styles */
+.contact form .inputBox textarea {
+  resize: none;
+  height: 13rem;
+}
+
+/* Contact section form input label styles */
+.contact form .inputBox label {
+  position: absolute;
+  top: 1.7rem;
+  left: 0;
+  font-size: 1.7rem;
+  color: #666;
+  transition: 0.2s linear;
+}
+
+/* Contact section form input label focus styles */
+.contact form .inputBox input:focus ~ label,
+.contact form .inputBox input:valid ~ label,
+.contact form .inputBox textarea:focus ~ label,
+.contact form .inputBox textarea:valid ~ label {
+  top: -0.5rem;
+  font-size: 1.5rem;
+  color: var(--orange);
+}
+
+/* Footer styles */
+.footer {
+  padding-top: 3rem;
+}
+
+/* Footer box container styles */
+.footer .box-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Footer box styles */
+.footer .box-container .box {
+  flex: 1 1 25rem;
+  margin: 2rem;
+}
+
+/* Footer box heading styles */
+.footer .box-container .box h2 {
+  font-size: 2.5rem;
+  padding: 1rem 0;
+  color: black;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+}
+.footer .box-container .box h2:hover{
+  color: var(--orange);
+}
+
+/* Footer box paragraph styles */
+.footer .box-container .box p {
+  font-size: 1.5rem;
+  padding: 2rem 0;
+  color: #666 ;
+}
+
+/* Footer box link styles */
+.footer .box-container .box a {
+  display: block;
+  font-size: 1.5rem;
+  padding: 1rem 0;
+  color:  #666;
+}
+
+/* Footer box link hover styles */
+.footer .box-container .box a:hover {
+  text-decoration: underline;
+}
+
+/* Footer box info styles */
+.footer .box-container .box .info {
+  display: flex;
+  align-items: center;
+}
+
+/* Footer box info icon styles */
+.footer .box-container .box .info i {
+  margin: 0.5rem 0;
+  margin-right: 1rem;
+  border-radius: 50%;
+  background: #ffcc80;
+  color: var(--orange);
+  font-size: 1.5rem;
+  height: 4.5rem;
+  width: 4.5rem;
+  line-height: 4.5rem;
+  text-align: center;
+}
+
+/* Footer credit styles */
+.footer .credit {
+  font-size: 2rem;
+  font-weight: normal;
+  letter-spacing: 0.1rem;
+  color: #333;
+  border-top: 0.1rem solid #fff5;
+  padding: 2.5rem 1rem;
+  text-align: center;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 991px) {
+  section {
+    padding: 0 3%;
+    padding-top: 7.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Responsive header label styles */
+  header label {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  /* Responsive header navbar styles */
+  header .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    padding: 1rem 2rem;
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    transform-origin: top;
+    transform: scaleY(0);
+    opacity: 0;
+    transition: 0.2s linear;
+    font-size: medium;
+  }
+
+  /* Responsive header navbar link styles */
+  header .navbar a {
+    display: block;
+    margin: 1rem 0;
+    font-size: 10px;
+  }
+
+  /* Responsive header input checked styles */
+  header input:checked ~ .navbar {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+
+  /* Responsive header input checked label styles */
+  header input:checked ~ label::before {
+    content: "\f00d";
+  }
+
+  /* Responsive home section styles */
+  .home {
+    flex-flow: column-reverse;
+  }
+  /* Responsive home image styles */
+  .home .image img {
+    width: 100%;
+  }
+  /* Responsive home content heading styles */
+  .home .content h3 {
+    font-size: 3.6rem;
+  }
+  /* Responsive home content paragraph styles */
+  .home .content p {
+    font-size: 1.5rem;
+  }
+  /* Responsive about section background position */
+  .about {
+    background-position: right;
+  }
+}
+
+/* Additional media query for smaller devices */
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+  /* Responsive about section column content buttons link styles */
+  .about .column .content .buttons a {
+    width: 100%;
+    text-align: center;
+  }
+  /* Responsive about section column content buttons last child link margin styles */
+  .about .column .content .buttons a:last-child {
+    margin: 1rem 0;
+  }
+}
